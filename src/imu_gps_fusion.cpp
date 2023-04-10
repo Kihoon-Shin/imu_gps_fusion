@@ -34,6 +34,8 @@ ImuGpsFusion::~ImuGpsFusion() {}
 
 void ImuGpsFusion::imuInit(const vector<ImuData<double>> &imu_datas)
 {
+    // refer to https://github.com/daniilidis-group/msckf_mono/blob/master/src/ros_interface.cpp - void RosInterface::initialize_imu()
+    
     // calculate accelerator and gyro mean
     int num = 0;
     Eigen::Vector3d total_acc(0.0, 0.0, 0.0);
