@@ -40,6 +40,7 @@ void gpsCallback(const sensor_msgs::NavSatFixConstPtr &msg)
 
 void interpolateImuData(const sensor_msgs::ImuConstPtr &first_data, const sensor_msgs::ImuConstPtr &second_data, double cur_stamp, sensor_msgs::Imu &inter_data)
 {
+    // linear_interpolation (https://blog.naver.com/aorigin/220947541918)
     double first_stamp = first_data->header.stamp.toSec();
     double second_stamp = second_data->header.stamp.toSec();
     double scale = (cur_stamp - first_stamp) / (second_stamp - first_stamp);
