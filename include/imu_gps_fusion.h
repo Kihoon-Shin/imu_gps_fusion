@@ -8,6 +8,7 @@
 #define _IMU_GPS_FUSION_H_
 
 #include <iostream>
+#include <vector>
 #include "types.h"
 #include "wgs_conversions.h"
 
