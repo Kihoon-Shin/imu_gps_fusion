@@ -31,5 +31,5 @@ rosbag play *.bag --clock
 ```
 
 ## Result
+![result](https://user-images.githubusercontent.com/82350419/232706594-36b1d094-ce2c-4bbf-b1ed-a4c4db61346f.png)
 
-![](result.png)
