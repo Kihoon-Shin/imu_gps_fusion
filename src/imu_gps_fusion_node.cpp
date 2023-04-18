@@ -46,8 +46,8 @@ void interpolateImuData(const sensor_msgs::ImuConstPtr &first_data, const sensor
     double scale = (cur_stamp - first_stamp) / (second_stamp - first_stamp);
     inter_data = *first_data;
     inter_data.angular_velocity.x = scale * (second_data->angular_velocity.x - first_data->angular_velocity.x) + first_data->angular_velocity.x;
-    inter_data.angular_velocity.y = scale * (second_data->angular_velocity.x - first_data->angular_velocity.x) + first_data->angular_velocity.x;
-    inter_data.angular_velocity.z = scale * (second_data->angular_velocity.x - first_data->angular_velocity.x) + first_data->angular_velocity.x;
+    inter_data.angular_velocity.y = scale * (second_data->angular_velocity.y - first_data->angular_velocity.y) + first_data->angular_velocity.y;
+    inter_data.angular_velocity.z = scale * (second_data->angular_velocity.z - first_data->angular_velocity.z) + first_data->angular_velocity.z;
     inter_data.linear_acceleration.x = scale * (second_data->linear_acceleration.x - first_data->linear_acceleration.x) + first_data->linear_acceleration.x;
     inter_data.linear_acceleration.y = scale * (second_data->linear_acceleration.y - first_data->linear_acceleration.y) + first_data->linear_acceleration.y;
     inter_data.linear_acceleration.z = scale * (second_data->linear_acceleration.z - first_data->linear_acceleration.z) + first_data->linear_acceleration.z;
